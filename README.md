@@ -18,4 +18,5 @@
     +transition, animation, transform
     +css class naming(BEM)
 
-
+今天学习的BEM命名法，block－element-modifiers及模块、元素、修饰符。
+b可以包含b,m组成最小的b,修饰符来区别模块和元素。元素全部使用class。
