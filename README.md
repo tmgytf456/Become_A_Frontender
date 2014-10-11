@@ -64,10 +64,69 @@
 
 
 ##2014年9月23日 星期二-下了一整天的雨
-#inline，block and inline-block
-inline不换行
-block换行
-inline-block不换行
+#Position schemes
+display:
+
+display为inline\inline-block\inline-table时为行内级元素。
+
+行内级元素生成、行内盒，它是横向排列的元素。a\span是行内元素
+
+当它的display属性为inline时它是一个行内元素，内部可以换行。如果他是一个inline-block它是一个行内块元素，它不能进行换行。
+
+display为block\list-item\table是为块级元素
+
+块级元素会生成至少一个块级盒，我们叫他主要块级盒，每个块级盒占用一行，竖向排列。div\p
+
+ 
+
+float:
+
+none\left\right
+
+当position为static\raletive时，float不为none时，产生浮动，浮动不占用任何正常的文档留空间，当一个元素从正常的文档六中抽出时，任然在问文档流中的元素将忽略该元素并填补他原先的空间。
+
+left在其容器的头部，right在其容器的尾部
+
+设置float属性后会使行内元素变为block。
+
+ 
+
+position:
+
+static\raletive\absolute\fixed
+
+raletive正常文档流，即使出现left\right\top\bottom偏移，也不会动摇其正常文档流的位置。
+
+absolute完全脱离文档流，不占用文档流位置。相对于其属性为非static的父级元素定位。
+
+行内元素在设置position=absolute后inline变为block。
+
+fiexd完全脱离文档流，相对于窗口进行定位。
+
+ 
+
+position=raletive & float = left || right
+
+文档会浮动也会偏移
+
+postion = absolute & float = left ||right
+
+文档的float属性失效，clear属性失效。
+
+ 
+
+三者的关系：
+
+1.设置display属性为none后，position和float属性都无效
+
+2.设置position为absolute或fiexd后float属性为none，display变为blcok\table
+
+2.设置position为static或raletive后，float属性不为none,display变为block\table
+
+ 
+
+设置position属性为raletive、absolute后会覆盖其底部的正常文档流
+
 
 ##2014年9月22日 星期一-小雨
 ###Doctype: standerd mode & quirks mode
